@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Todo List</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: rgba(20, 20, 30, 0.95);
+            color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #4a90e2;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+        }
+        
+        h1 {
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        h2 {
+            color: #64b5f6;
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #4a90e2;
+        }
+        
+        .todo-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            padding: 8px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .todo-item:hover {
+            background: rgba(74, 144, 226, 0.1);
+        }
+        
+        .todo-item.completed {
+            text-decoration: line-through;
+            opacity: 0.6;
+            background: rgba(76, 175, 80, 0.1);
+        }
+        
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+            accent-color: #4a90e2;
+            cursor: pointer;
+        }
+        
+        .todo-text {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .progress {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(74, 144, 226, 0.1);
+            border-radius: 8px;
+            font-size: 12px;
+            color: #b3d9ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 AI/ML Learning Stream</h1>
+    
+    <h2>📚 Programming Foundations</h2>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Python programming basics</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Data science essentials</span>
+    </div>
+    
+    <h2>🔢 Mathematical Foundations</h2>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Mathematics</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Probability and statistics</span>
+    </div>
+    
+    <h2>🤖 Core Machine Learning</h2>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Machine learning fundamentals</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Feature engineering and model evaluation</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Advanced machine learning algorithms</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Model tuning and optimization</span>
+    </div>
+    
+    <h2>🧠 Deep Learning</h2>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Neural networks and Deep learning</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Convolutional neural networks (CNNs)</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Recurrent neural networks (RNNs)</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Transformers</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Transfer learning and fine-tuning</span>
+    </div>
+    
+    <h2>🛠️ Frameworks & Tools</h2>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">TensorFlow basics</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">TensorFlow projects</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">PyTorch</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">LangChain</span>
+    </div>
+    
+    <h2>🎯 Advanced Applications</h2>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">AI Agents</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">MLOps (DevOps for ML)</span>
+    </div>
+    
+    <h2>💼 Hands-on Experience</h2>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Projects implementation</span>
+    </div>
+    <div class="todo-item">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+        <span class="todo-text">Real-world applications</span>
+    </div>
+    
+    <div class="progress">
+        <span id="progressText">Progress: 0/20 completed</span>
+    </div>
+
+    <script>
+        function toggleComplete(checkbox) {
+            const todoItem = checkbox.parentElement;
+            if (checkbox.checked) {
+                todoItem.classList.add('completed');
+            } else {
+                todoItem.classList.remove('completed');
+            }
+            updateProgress();
+        }
+        
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('.checkbox');
+            const completed = document.querySelectorAll('.checkbox:checked').length;
+            const total = checkboxes.length;
+            document.getElementById('progressText').textContent = `Progress: ${completed}/${total} completed`;
+        }
+    </script>
+</body>
+</html>
